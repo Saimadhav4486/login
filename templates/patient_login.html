@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Patient Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    <label for="text">Username:</label>
+    <input type="text" name="user" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="{% url 'patient_signup' %}">Sign up</a></p>
+  <p>Forgot your password? <a href="#">Reset password</a></p>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="patient-box" >
+    <h2 style="font-size: 30px;">Patient Dashboard</h2>
+    <p style="font-size: 25px;">Welcome, {{ patient_details.first_name }} {{ patient_details.last_name }}!</p>
+    <p style="font-size: 20px;">Email: {{ patient_details.email }}</p>
+    <p style="font-size: 15px;">Address: {{ patient_details.address_line1 }}, {{ patient_details.city }}, {{ patient_details.state }} - {{ patient_details.pincode }}</p>
+  </div>
+
+  <a href="{% url 'patient_logout' %}">Logout</a>
+  <!-- Add other patient details as needed -->
+{% endblock %}

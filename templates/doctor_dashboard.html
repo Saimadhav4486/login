@@ -1,0 +1,11 @@
+<!-- doctor_dashboard.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Doctor Dashboard</h2>
+  <p>Welcome, {{ doctor_details.first_name }} {{ doctor_details.last_name }}!</p>
+  <p>Email: {{ doctor_details.email }}</p>
+  <p>Address: {{ doctor_details.address_line1 }}, {{ doctor_details.city }}, {{ doctor_details.state }} - {{ doctor_details.pincode }}</p>
+  <!-- Add other doctor details as needed -->
+  <a href="{% url 'doctor_logout' %}">Logout</a>
+{% endblock %}
